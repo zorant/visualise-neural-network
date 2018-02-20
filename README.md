@@ -1,14 +1,10 @@
 # Visualise Neural Network
-Generates a static diagram of a neural network, where each neuron is connected to every neuron in the previous layer.
-
-For example, this code:
-
-    network = NeuralNetwork()
-    network.add_layer(3)
-    network.add_layer(4)
-    network.add_layer(1)
-    network.draw()
-
-Will generate this diagram:
-
-![Diagram of a neural network with 3 neurons in the first layer, 4 neurons in the second layer and 1 neuron in the 3rd layer](http://i.stack.imgur.com/8oxCO.png)
+Edited original submission to visualize an example of a netwrok that does delayed-match-to-sample task.
+(https://github.com/zorant/visualise-neural-network/blob/master/dms_time1.png)
+(https://github.com/zorant/visualise-neural-network/blob/master/dms_time2.png)
+(https://github.com/zorant/visualise-neural-network/blob/master/dms_time3.png)
+(https://github.com/zorant/visualise-neural-network/blob/master/dms_time4.png)
+(https://github.com/zorant/visualise-neural-network/blob/master/dms_time5.png)
+(https://github.com/zorant/visualise-neural-network/blob/master/dms_time6.png)
+(https://github.com/zorant/visualise-neural-network/blob/master/dms_time7.png)
+(https://github.com/zorant/visualise-neural-network/blob/master/dms_time8.png)
