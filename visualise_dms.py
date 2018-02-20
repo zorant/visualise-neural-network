@@ -88,7 +88,7 @@ class NeuralNetwork():
 #network.__line_between_two_neurons(1,2)
 #connections = [[1, 1]]
 
-def draw_dms(): 
+def draw_dms(i): 
     
     network.draw()        
     l0 = network.layers[0]
@@ -134,11 +134,8 @@ def draw_dms():
     pyplot.axis('scaled')
     pyplot.axis('off')
     pyplot.xlim(-5, 30)
-    #aa = l4.neurons[1]
-    #aa.x = 35
-    #aa.draw()
-    #network = network.layers[0].draw(fill=True)
     network.draw()
+    pyplot.savefig('dms_time%d.png' % i)
     pyplot.show()
         
 # set params
@@ -154,8 +151,7 @@ network.add_layer(8,['t1','t2','t3','t4','t5','t6','t7','t8'],[1]*8)
 network.add_layer(6,['T1','T2','T3','T4','T5','T6'],[1]*6)
 network.add_layer(7,['ATT','Gate','ATT','Gate','Diff','Up','Down'],[1]*7)
 network.add_layer(2,['Same','Different'],[1]*2)
-draw_dms()
-pyplot.savefig('dms_time1.png')
+draw_dms(1)
 
 # time 2
 network = NeuralNetwork()
@@ -164,8 +160,7 @@ network.add_layer(8,['t1','t2','t3','t4','t5','t6','t7','t8'],np.arange(0.,0.16,
 network.add_layer(6,['T1','T2','T3','T4','T5','T6'],[0,1,1,1,1,1])
 network.add_layer(7,['ATT','Gate','ATT','Gate','Diff','Up','Down'],[0,1,1,1,1,1,1])
 network.add_layer(2,['Same','Different'],[1]*2)
-draw_dms()
-pyplot.savefig('dms_time2.png')
+draw_dms(2)
 
 # time 3
 network = NeuralNetwork()
@@ -174,8 +169,7 @@ network.add_layer(8,['t1','t2','t3','t4','t5','t6','t7','t8'],np.arange(0.16,0.2
 network.add_layer(6,['T1','T2','T3','T4','T5','T6'],[1,0,1,1,1,1])
 network.add_layer(7,['ATT','Gate','ATT','Gate','Diff','Up','Down'],[1,0,1,1,1,1,1])
 network.add_layer(2,['Same','Different'],[1]*2)
-draw_dms()
-pyplot.savefig('dms_time3.png')
+draw_dms(3)
 
 # time 4
 network = NeuralNetwork()
@@ -184,8 +178,7 @@ network.add_layer(8,['t1','t2','t3','t4','t5','t6','t7','t8'],np.arange(0.24,0.3
 network.add_layer(6,['T1','T2','T3','T4','T5','T6'],[1,1,0,1,1,1])
 network.add_layer(7,['ATT','Gate','ATT','Gate','Diff','Up','Down'],[1,1,0,1,1,1,1])
 network.add_layer(2,['Same','Different'],[1]*2)
-draw_dms()
-pyplot.savefig('dms_time4.png')
+draw_dms(4)
 
 # time 5
 network = NeuralNetwork()
@@ -194,8 +187,7 @@ network.add_layer(8,['t1','t2','t3','t4','t5','t6','t7','t8'],np.arange(0.32,0.4
 network.add_layer(6,['T1','T2','T3','T4','T5','T6'],[1,1,1,0,1,1])
 network.add_layer(7,['ATT','Gate','ATT','Gate','Diff','Up','Down'],[1,1,1,0,1,1,1])
 network.add_layer(2,['Same','Different'],[1]*2)
-draw_dms()
-pyplot.savefig('dms_time5.png')
+draw_dms(5)
 
 # time 6
 network = NeuralNetwork()
@@ -204,8 +196,7 @@ network.add_layer(8,['t1','t2','t3','t4','t5','t6','t7','t8'],np.arange(0.4,0.48
 network.add_layer(6,['T1','T2','T3','T4','T5','T6'],[1,1,1,1,0,1])
 network.add_layer(7,['ATT','Gate','ATT','Gate','Diff','Up','Down'],[1,1,1,1,0,1,1])
 network.add_layer(2,['Same','Different'],[1]*2)
-draw_dms()
-pyplot.savefig('dms_time6.png')
+draw_dms(6)
 
 # time 7
 network = NeuralNetwork()
@@ -214,8 +205,7 @@ network.add_layer(8,['t1','t2','t3','t4','t5','t6','t7','t8'],np.arange(0.48,0.6
 network.add_layer(6,['T1','T2','T3','T4','T5','T6'],[1,1,1,1,0,1])
 network.add_layer(7,['ATT','Gate','ATT','Gate','Diff','Up','Down'],[1,1,1,1,0,1,1])
 network.add_layer(2,['Same','Different'],[1]*2)
-draw_dms()
-pyplot.savefig('dms_time7.png')
+draw_dms(7)
 
 # time 8
 network = NeuralNetwork()
@@ -224,5 +214,4 @@ network.add_layer(8,['t1','t2','t3','t4','t5','t6','t7','t8'],np.arange(0.64,0.9
 network.add_layer(6,['T1','T2','T3','T4','T5','T6'],[1,1,1,1,1,0])
 network.add_layer(7,['ATT','Gate','ATT','Gate','Diff','Up','Down'],[1,1,1,1,0,1,0])
 network.add_layer(2,['Same','Different'],[1, 0])
-draw_dms()
-pyplot.savefig('dms_time8.png')
+draw_dms(8)
